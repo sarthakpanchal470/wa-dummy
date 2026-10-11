@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WA Dummy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="login" class="screen">
+  <div class="login-card">
+    <div class="logo">💬</div>
+    <h2>WA Dummy</h2>
+    <p class="muted">Demo messenger. Log in with a name and phone number. Use a different phone number on each laptop.</p>
+    <form id="loginForm" autocomplete="off">
+      <input id="loginName" placeholder="Your name (new accounts)">
+      <input id="loginPhone" placeholder="Phone number, e.g. 9876543210" inputmode="tel">
+      <button type="submit">Continue</button>
+      <div id="loginError" class="error"></div>
+    </form>
+  </div>
+</section>
+
+<section id="app" class="screen hidden">
+  <aside id="sidebar">
+    <header class="top">
+      <div class="avatar" id="meAvatar"></div>
+      <div class="grow" id="meName"></div>
+      <button id="newChatBtn" title="New chat">＋</button>
+      <button id="newGroupBtn" title="New group">👥</button>
+      <button id="logoutBtn" title="Log out">⎋</button>
+    </header>
+    <div id="connBar" class="connbar hidden">Reconnecting…</div>
+    <input id="search" placeholder="Search chats">
+    <div id="chatList"></div>
+  </aside>
+
+  <main id="main">
+    <div id="empty" class="empty">
+      <h3>WA Dummy</h3>
+      Select a chat to start messaging.<br>
+      <small>Open this page on a second laptop and log in with another phone number.</small>
+    </div>
+    <div id="chatView" class="hidden">
+      <header class="top">
+        <button id="backBtn" class="back" title="Back">←</button>
+        <div class="avatar" id="chatAvatar"></div>
+        <div class="grow">
+          <div id="chatTitle"></div>
+          <div id="chatSub" class="sub"></div>
+        </div>
+      </header>
+      <div id="messages"></div>
+      <div id="replyBar" class="hidden"></div>
+      <form id="composer" autocomplete="off">
+        <textarea id="input" rows="1" placeholder="Type a message"></textarea>
+        <button type="submit" title="Send">➤</button>
+      </form>
+    </div>
+  </main>
+</section>
+
+<div id="ctxmenu" class="hidden"></div>
+
+<div id="modal" class="hidden">
+  <div class="card">
+    <div class="mhead"><b id="mTitle"></b><button id="mClose" title="Close">✕</button></div>
+    <div id="mBody"></div>
+  </div>
+</div>
+
+<div id="toast" class="hidden"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

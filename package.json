@@ -1,0 +1,14 @@
+{
+  "name": "wa-dummy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "WhatsApp-style messenger demo with a REST API and live events, for testing AI auto-replies",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "bot": "node examples/shop-bot.js http://localhost:3000"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
